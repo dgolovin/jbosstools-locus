@@ -6,3 +6,4 @@ Bundle-Version: 1.3.0.qualifier
 Bundle-Vendor: JBoss, by Red Hat
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: org.jboss.dmr
+Bundle-ClassPath: libs/jboss-dmr-1.3.0.Final.jar

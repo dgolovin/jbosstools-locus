@@ -20,7 +20,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   				<execution>
   					<id>unpack-jar</id>
   					<goals>
-  						<goal>unpack</goal>
+  						<goal>copy</goal>
   					</goals>
   					<configuration>
   						<artifactItems>
@@ -31,20 +31,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   								<excludes>META-INF/MANIFEST.MF</excludes>
   							</artifactItem>
   						</artifactItems>
+  						<outputDirectory>libs</outputDirectory>
   					</configuration>
   				</execution>
   			</executions>
-  		</plugin>
-  		<plugin>
-  			<groupId>org.eclipse.tycho</groupId>
-  			<artifactId>tycho-packaging-plugin</artifactId>
-  			<configuration>
-  				<additionalFileSets>
-					<fileSet>
-						<directory>${project.build.directory}/dependency/</directory>
-					 </fileSet>     
-				</additionalFileSets>
-  			</configuration>
   		</plugin>
   	</plugins>
   </build>
